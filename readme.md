@@ -32,3 +32,8 @@ This structure, it seems to me, is extensible in the sense that other classes
 The structure is somewhat circular in nature, which led to the need for a
  forward declaration of the Voraldo class, so that Voraldo_IO and Voraldo_Draw
  could have pointers the parent object.
+
+
+The current structure of this program is shown in the digram below:
+
+![diagram](https://raw.githubusercontent.com/0xBAMA/V0.5/master/voraldo%20with%20comments.png)
