@@ -89,13 +89,22 @@ void Voraldo_Draw::mask_all_nonzero()
 {
  for(int i = 0; i < num_cells; i++)
  {
-  data[i].mask = false;
+  if(data[i].state != 0)
+  {
+   data[i].mask = true;
+  }
  }
 }
 
 void Voraldo_Draw::mask_by_state(unsigned char s)
 {
-
+ for(int i = 0; i < num_cells; i++)
+ {
+  if(data[i].state == s)
+  {
+   data[i].mask = true;
+  }
+ }
 }
 
 void Voraldo_Draw::draw_point(vec point, unsigned char set, bool draw=true, bool mask=false)
