@@ -17,6 +17,7 @@ Just a note, this:
   a = x ? x : y;
 */
 
+
 //stream class shit
 using std::cout;
 using std::endl;
@@ -33,6 +34,7 @@ int init_z = 257;
 
 Voraldo *main_block;
 
-int main(){
+int main()
+{
  main_block = new Voraldo();
 }
