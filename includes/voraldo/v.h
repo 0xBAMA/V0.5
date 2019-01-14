@@ -66,7 +66,7 @@ public:
 	void load(){return;}
 	void save(){return;}
 
-	void display();
+	void display(std::string filename, double x_rot, double y_rot, double z_rot, double scale, bool perspective);
 
 };
 
@@ -126,10 +126,10 @@ public:
 	void draw_point(vec point, unsigned char set, bool draw=true, bool mask=false);
 	//draws a point at the location given by the input argument
 
-	void draw_line_segment(vec point1, vec point2, unsigned char set, bool draw=true, bool mask=false);
+	void draw_line_segment(vec v1, vec v2, unsigned char set, bool draw=true, bool mask=false);
 	//draws a line segment from point1 to point2
 
-	void draw_triangle(vec point1, vec point2, vec point3, unsigned char set, bool draw=true, bool mask=false);
+	void draw_triangle(vec v0, vec v1, vec v2, unsigned char set, bool draw=true, bool mask=false);
 	//draws a triangle between point 1, point 2 and point 3
 
 	void draw_sphere(vec center, double radius, unsigned char set, bool draw=true, bool mask=false);
@@ -180,13 +180,13 @@ public:
 		unsigned char get_data_by_vector_index(vec index);
 		//return the state value for the selected index
 
-		void set_data_by_vector_index(vec index, unsigned char set, bool mask);
+		void set_data_by_vector_index(vec index, unsigned char set, bool draw, bool mask);
 		//set the data at the selected index, also setting the mask if the
 		//mask variable is true
 
 		bool planetest(vec plane_point, vec plane_normal, vec test_point);
 		//see docs
 
-		bool intersect_ray_bbox(vec bbox_min, vec bbox_max, vec ray_org, vec ray_dir, double t0=0, double t1=9999, double &tmin, double &tmax);
+		bool intersect_ray_bbox(vec bbox_min, vec bbox_max, vec ray_org, vec ray_dir, double &tmin, double &tmax, double t0=0, double t1=9999);
 		//see docs
 };
