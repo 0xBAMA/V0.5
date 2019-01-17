@@ -787,8 +787,7 @@ Voraldo::Voraldo()
 
   palette[0] = {0,0,0,0}; //black - emtpy
 
-  //alpha = 255
-
+/*weird desaturated palette "steam lords"
   palette[ 1] = { 33, 59, 37,255};	 //#213b25 dark green
   palette[ 2] = { 58,	96,	74,255}	  //#3a604a medium green
   palette[ 3] = { 79,119, 84,255};	 //#4f7754 light green
@@ -805,76 +804,80 @@ Voraldo::Voraldo()
   palette[14] = {124,148,161,255};	 //#7c94a1 light blue (5)
   palette[15] = {160,185,186,255};	 //#a0b9ba light blue (6)
   palette[16] = {192,209,204,255};	 //#c0d1cc light blue (7)
+*/
 
-  //alpha = 128
 
-  palette[17] = { 33, 59, 37,128};	 //#213b25 dark green
-  palette[18] = { 58,	96,	74,128}	  //#3a604a medium green
-  palette[19] = { 79,119, 84,128};	 //#4f7754 light green
-  palette[20] = {161,159,124,128}; 	//#a19f7c light tan
-  palette[21] = {119,116,	79,128};	 //#77744f medium tan
-  palette[22] = {119,	92,	79,128};	 //#775c4f light rose
-  palette[23] = { 96,	59,	58,128};	 //#603b3a dark rose
-  palette[24] = { 59,	33,	55,128};	 //#3b2137 purple
-  palette[25] = { 23,	14,	25,128};	 //#170e19 darkest blue (0)
-  palette[26] = { 47,	33,	59,128};	 //#2f213b dark blue (1)
-  palette[27] = { 67,	58,	96,128};	 //#433a60 dark blue (2)
-  palette[28] = { 79,	82,119,128};	 //#4f5277 dark blue (3)
-  palette[29] = {101,115,140,128};	 //#65738c light blue (4)
-  palette[30] = {124,148,161,128};	 //#7c94a1 light blue (5)
-  palette[31] = {160,185,186,128};	 //#a0b9ba light blue (6)
-  palette[32] = {192,209,204,128};	 //#c0d1cc light blue (7)
+ palette[  1] = {};
+ palette[  2] = {};
+ palette[  3] = {};
+ palette[  4] = {};
+ palette[  5] = {};
+ palette[  6] = {};
+ palette[  7] = {};
+ palette[  8] = {};
+ palette[  9] = {};
+ palette[ 10] = {};
+ palette[ 11] = {};
+ palette[ 12] = {};
+ palette[ 13] = {};
+ palette[ 14] = {};
+ palette[ 15] = {};
+ palette[ 16] = {};
+ palette[ 17] = {};
+ palette[ 18] = {};
+ palette[ 19] = {};
+ palette[ 21] = {};
+ palette[ 22] = {};
+ palette[ 23] = {};
+ palette[ 24] = {};
+ palette[ 25] = {};
+ palette[ 26] = {};
+ palette[ 27] = {};
+ palette[ 28] = {};
+ palette[ 29] = {};
+ palette[ 30] = {};
+ palette[ 31] = {};
+ palette[ 32] = {};
+ palette[ 33] = {};
+ palette[ 34] = {};
+ palette[ 35] = {};
+ palette[ 36] = {};
+ palette[ 37] = {};
+ palette[ 38] = {};
+ palette[ 39] = {};
+ palette[ 40] = {};
+ palette[ 41] = {};
+ palette[ 42] = {};
+ palette[ 43] = {};
+ palette[ 44] = {};
+ palette[ 45] = {};
+ palette[ 46] = {};
+ palette[ 47] = {};
+ palette[ 48] = {};
+ palette[ 49] = {};
+ palette[ 50] = {};
+ palette[ 51] = {};
+ palette[ 52] = {};
+ palette[ 53] = {};
+ palette[ 54] = {};
+ palette[ 55] = {};
+ palette[ 56] = {};
+ palette[ 57] = {};
+ palette[ 58] = {};
+ palette[ 59] = {};
+ palette[ 60] = {};
 
-  //alpha = 64
 
-  palette[33] = { 33, 59, 37, 64};	 //#213b25 dark green
-  palette[34] = { 58,	96,	74, 64}	  //#3a604a medium green
-  palette[35] = { 79,119, 84, 64};	 //#4f7754 light green
-  palette[36] = {161,159,124, 64}; 	//#a19f7c light tan
-  palette[37] = {119,116,	79, 64};	 //#77744f medium tan
-  palette[38] = {119,	92,	79, 64};	 //#775c4f light rose
-  palette[39] = { 96,	59,	58, 64};	 //#603b3a dark rose
-  palette[40] = { 59,	33,	55, 64};	 //#3b2137 purple
-  palette[41] = { 23,	14,	25, 64};	 //#170e19 darkest blue (0)
-  palette[42] = { 47,	33,	59, 64};	 //#2f213b dark blue (1)
-  palette[43] = { 67,	58,	96, 64};	 //#433a60 dark blue (2)
-  palette[44] = { 79,	82,119, 64};	 //#4f5277 dark blue (3)
-  palette[45] = {101,115,140, 64};	 //#65738c light blue (4)
-  palette[46] = {124,148,161, 64};	 //#7c94a1 light blue (5)
-  palette[47] = {160,185,186, 64};	 //#a0b9ba light blue (6)
-  palette[48] = {192,209,204, 64};	 //#c0d1cc light blue (7)
-
-  //alpha = 32
-
-  palette[49] = { 33, 59, 37, 32};	 //#213b25 dark green
-  palette[50] = { 58,	96,	74, 32}	  //#3a604a medium green
-  palette[51] = { 79,119, 84, 32};	 //#4f7754 light green
-  palette[52] = {161,159,124, 32}; 	//#a19f7c light tan
-  palette[53] = {119,116,	79, 32};	 //#77744f medium tan
-  palette[54] = {119,	92,	79, 32};	 //#775c4f light rose
-  palette[55] = { 96,	59,	58, 32};	 //#603b3a dark rose
-  palette[56] = { 59,	33,	55, 32};	 //#3b2137 purple
-  palette[57] = { 23,	14,	25, 32};	 //#170e19 darkest blue (0)
-  palette[58] = { 47,	33,	59, 32};	 //#2f213b dark blue (1)
-  palette[59] = { 67,	58,	96, 32};	 //#433a60 dark blue (2)
-  palette[60] = { 79,	82,119, 32};	 //#4f5277 dark blue (3)
-  palette[61] = {101,115,140, 32};	 //#65738c light blue (4)
-  palette[62] = {124,148,161, 32};	 //#7c94a1 light blue (5)
-  palette[63] = {160,185,186, 32};	 //#a0b9ba light blue (6)
-  palette[64] = {192,209,204, 32};	 //#c0d1cc light blue (7)
-
-  data = NULL;//call draw.init_block(x,y,z,noise_fill)
+ data = NULL;//call draw.init_block(x,y,z,noise_fill)
   //to populate the data array
 }
 
 Voraldo::~Voraldo()
 {
-
   delete[] io;
   delete[] draw;
   delete[] palette;
   delete[] data;
-
 }
 
 unsigned char Voraldo::get_data_by_vector_index(vec index)

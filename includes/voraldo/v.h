@@ -27,9 +27,9 @@
 
 //#include <bitset>
 //not in use right now - potentially useful for a memory-saving optimization
+//	>>algorithm given to Andriy as a project independent of this one on 1/14
 
 using vec = linalg::aliases::double3;
-//using vec2 = linalg::aliases::double2;
 using mat = linalg::aliases::double3x3;
 
 using std::cout;
@@ -42,8 +42,8 @@ struct RGBA{
 	unsigned char red;
 	unsigned char green;
 	unsigned char blue;
- unsigned char alpha;
-};
+ double alpha; //changing this to avoid excessive quantization errors
+};	//I am still researching how the alpha channel is implemented
 
 struct Vox{
 	unsigned char state;
