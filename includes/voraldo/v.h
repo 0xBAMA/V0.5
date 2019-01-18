@@ -46,7 +46,7 @@ struct RGBA{
 };	//I am still researching how the alpha channel is implemented
 
 struct Vox{
-	unsigned char state;
+	unsigned int state;
 	bool mask;
 
 	//unsigned char lighting_intensity;
