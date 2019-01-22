@@ -37,3 +37,7 @@ The structure is somewhat circular in nature, which led to the need for a
 The current structure of this program is shown in the diagram below:
 
 ![diagram](https://raw.githubusercontent.com/0xBAMA/V0.5/master/voraldo%20with%20comments.png)
+
+
+also, the color palette is included here:
+![palette](https://raw.githubusercontent.com/0xBAMA/V0.5/master/colors.png)

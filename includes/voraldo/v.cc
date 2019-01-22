@@ -785,7 +785,7 @@ Voraldo::Voraldo()
 
   //colors
 
-  palette[0] = {0,0,0,0}; //black - emtpy
+  palette[0] = {0,0,0,0.0}; //black - emtpy
 
 /*weird desaturated palette "steam lords"
   palette[ 1] = { 33, 59, 37,255};	 //#213b25 dark green
@@ -806,111 +806,139 @@ Voraldo::Voraldo()
   palette[16] = {192,209,204,255};	 //#c0d1cc light blue (7)
 */
 
+//REDS
 
- palette[  1] = {};
- palette[  2] = {};
- palette[  3] = {};
- palette[  4] = {};
- palette[  5] = {};
- palette[  6] = {};
- palette[  7] = {};
- palette[  8] = {};
- palette[  9] = {};
- palette[ 10] = {};
- palette[ 11] = {};
- palette[ 12] = {};
- palette[ 13] = {};
- palette[ 14] = {};
- palette[ 15] = {};
- palette[ 16] = {};
- palette[ 17] = {};
- palette[ 18] = {};
- palette[ 19] = {};
- palette[ 21] = {};
- palette[ 22] = {};
- palette[ 23] = {};
- palette[ 24] = {};
- palette[ 25] = {};
- palette[ 26] = {};
- palette[ 27] = {};
- palette[ 28] = {};
- palette[ 29] = {};
- palette[ 30] = {};
- palette[ 31] = {};
- palette[ 32] = {};
- palette[ 33] = {};
- palette[ 34] = {};
- palette[ 35] = {};
- palette[ 36] = {};
- palette[ 37] = {};
- palette[ 38] = {};
- palette[ 39] = {};
- palette[ 40] = {};
- palette[ 41] = {};
- palette[ 42] = {};
- palette[ 43] = {};
- palette[ 44] = {};
- palette[ 45] = {};
- palette[ 46] = {};
- palette[ 47] = {};
- palette[ 48] = {};
- palette[ 49] = {};
- palette[ 50] = {};
- palette[ 51] = {};
- palette[ 52] = {};
- palette[ 53] = {};
- palette[ 54] = {};
- palette[ 55] = {};
- palette[ 56] = {};
- palette[ 57] = {};
- palette[ 58] = {};
- palette[ 59] = {};
- palette[ 60] = {};
- palette[ 61] = {};
- palette[ 62] = {};
- palette[ 63] = {};
- palette[ 64] = {};
- palette[ 65] = {};
- palette[ 66] = {};
- palette[ 67] = {};
- palette[ 68] = {};
- palette[ 69] = {};
- palette[ 70] = {};
- palette[ 71] = {};
- palette[ 72] = {};
- palette[ 73] = {};
- palette[ 74] = {};
- palette[ 75] = {};
- palette[ 76] = {};
- palette[ 77] = {};
- palette[ 78] = {};
- palette[ 79] = {};
- palette[ 80] = {};
- palette[ 81] = {};
- palette[ 82] = {};
- palette[ 83] = {};
- palette[ 84] = {};
- palette[ 85] = {};
- palette[ 86] = {};
- palette[ 87] = {};
- palette[ 88] = {};
- palette[ 89] = {};
- palette[ 90] = {};
- palette[ 91] = {};
- palette[ 92] = {};
- palette[ 93] = {};
- palette[ 94] = {};
- palette[ 95] = {};
- palette[ 96] = {};
- palette[ 97] = {};
- palette[ 98] = {};
- palette[ 99] = {};
- palette[100] = {};
- palette[101] = {};
- palette[102] = {};
- palette[103] = {};
- palette[104] = {};
- palette[105] = {};
+ palette[  1] = {254,0,0,1.0};      //color 1 - MS Light Red High
+ palette[  2] = {254,0,0,0.5};
+ palette[  3] = {254,0,0,0.25};
+ palette[  4] = {254,0,0,0.1};
+ palette[  5] = {254,0,0,0.05};
+ palette[  6] = {254,0,0,0.02};
+ palette[  7] = {254,0,0,0.01};
+
+ palette[  8] = {235,138,96,1.0};   //color 2 -  MS Light Red Low
+ palette[  9] = {235,138,96,0.5};
+ palette[ 10] = {235,138,96,0.25};
+ palette[ 11] = {235,138,96,0.1};
+
+ palette[ 12] = {126,0,0,1.0};      //color 3 - MS Dark Red High
+ palette[ 13] = {126,0,0,0.75};
+ palette[ 14] = {126,0,0,0.5};
+ palette[ 15] = {126,0,0,0.25};
+ palette[ 16] = {126,0,0,0.1};
+
+ palette[ 17] = {138,54,34,1.0};    //color 4 - MS Dark Red Low
+ palette[ 18] = {138,54,34,0.5};
+ palette[ 19] = {138,54,34,0.25};
+ palette[ 21] = {138,54,34,0.1};
+
+ palette[ 22] = {120,24,38,1.0};    //color 5 - T Dark Red
+ palette[ 23] = {120,24,38,0.5};
+ palette[ 24] = {120,24,38,0.25};
+ palette[ 25] = {120,24,38,0.1};
+
+ palette[ 26] = {165,45,39,1.0};    //color 6 - T Red
+ palette[ 27] = {165,45,39,0.5};
+ palette[ 28] = {165,45,39,0.25};
+ palette[ 29] = {165,45,39,0.1};
+
+ //ORANGES
+
+ palette[ 30] = {255,77,0,1.0};     //color 7 - Orange 1
+ palette[ 31] = {255,77,0,0.5};
+ palette[ 32] = {255,77,0,0.25};
+ palette[ 33] = {255,77,0,0.1};
+
+ palette[ 34] = {255,120,30,1.0};   //color 8 - Orange 2
+ palette[ 35] = {255,120,30,0.5};
+ palette[ 36] = {255,120,30,0.25};
+ palette[ 36] = {255,120,30,0.1};
+
+ palette[ 37] = {243,120,43,1.0};   //color 9 - Orange 3
+ palette[ 38] = {243,120,43,0.5};
+ palette[ 39] = {243,120,43,0.25};
+ palette[ 40] = {243,120,43,0.1};
+
+ palette[ 41] = {201,109,69,1.0};   //color 10  - T Orange
+ palette[ 42] = {201,109,69,0.5};
+ palette[ 43] = {201,109,69,0.25};
+ palette[ 44] = {201,109,69,0.1};
+
+ //YELLOWS
+
+ palette[ 45] = {255,255,4,1.0};    //color 11 - MS Light Yellow High
+ palette[ 46] = {255,255,4,0.75};
+ palette[ 47] = {255,255,4,0.5};
+ palette[ 48] = {255,255,4,0.25};
+ palette[ 49] = {255,255,4,0.1};
+ palette[ 50] = {255,255,4,0.05};
+
+ palette[ 51] = {255,217,63,1.0};   //color 12 - MS Light Yellow Low
+ palette[ 52] = {255,217,63,0.75};
+ palette[ 53] = {255,217,63,0.5};
+ palette[ 54] = {255,217,63,0.25};
+ palette[ 55] = {255,217,63,0.1};
+
+ palette[ 56] = {127,107,0,1.0};    //color 13 - Dark Gold
+ palette[ 57] = {127,107,0,0.75};
+ palette[ 58] = {127,107,0,0.5};
+ palette[ 59] = {127,107,0,0.25};
+ palette[ 60] = {127,107,0,0.1};
+
+ palette[ 61] = {126,126,0,1.0};    //color 14 - MS Dark Yellow High
+ palette[ 62] = {126,126,0,0.75};
+ palette[ 63] = {126,126,0,0.5};
+ palette[ 64] = {126,126,0,0.25};
+ palette[ 65] = {126,126,0,0.1};
+
+ palette[ 66] = {170,92,61,1.0};    //color 15 - MS Dark Yellow Low
+ palette[ 67] = {170,92,61,0.75};
+ palette[ 68] = {170,92,61,0.5};
+ palette[ 69] = {170,92,61,0.25};
+ palette[ 70] = {170,92,61,0.1};
+
+ palette[ 71] = {204,165,98,1.0};   //color 16 - T Yellow Dark
+ palette[ 72] = {204,165,98,0.75};
+ palette[ 73] = {204,165,98,0.5};
+ palette[ 74] = {204,165,98,0.25};
+ palette[ 75] = {204,165,98,0.1};
+
+ palette[ 76] = {207,194,129,1.0};  //color 17 - T Yellow Tan
+ palette[ 77] = {207,194,129,0.75};
+ palette[ 78] = {207,194,129,0.5};
+ palette[ 79] = {207,194,129,0.25};
+ palette[ 80] = {207,194,129,0.1};
+
+ palette[ 81] = {209,202,128,1.0};  //color 18 - T Yellow
+ palette[ 82] = {209,202,128,0.75};
+ palette[ 83] = {209,202,128,0.5};
+ palette[ 84] = {209,202,128,0.25};
+ palette[ 85] = {209,202,128,0.1};
+
+ palette[ 86] = {162,157,107,1.0};  //color 19 - T Tan
+ palette[ 87] = {162,157,107,0.75};
+ palette[ 88] = {162,157,107,0.5};
+ palette[ 89] = {162,157,107,0.25};
+ palette[ 90] = {162,157,107,1.0};
+
+ palette[ 91] = {131,107,63,1.0};   //color 20 - T Light Brown
+ palette[ 92] = {131,107,63,0.75};
+ palette[ 93] = {131,107,63,0.5};
+ palette[ 94] = {131,107,63,0.25};
+ palette[ 95] = {131,107,63,0.1};
+
+ palette[ 96] = {99,73,44,1.0};     //color 21 - T Brown
+ palette[ 97] = {99,73,44,0.75};
+ palette[ 98] = {99,73,44,0.5};
+ palette[ 99] = {99,73,44,0.25};
+ palette[100] = {99,73,44,0.1};
+
+ palette[101] = {65,51,37,1.0}; //color 22 - T Dark Brown
+ palette[102] = {65,51,37,1.0};
+ palette[103] = {65,51,37,1.0};
+ palette[104] = {65,51,37,1.0};
+ palette[105] = {65,51,37,1.0};
+
  palette[106] = {};
  palette[107] = {};
  palette[108] = {};
