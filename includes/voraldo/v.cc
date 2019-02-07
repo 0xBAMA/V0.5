@@ -122,7 +122,7 @@ void Voraldo_IO::display(std::string filename, double x_rot, double y_rot, doubl
  	vec block_min = vec(0,0,0);
  	vec block_max = vec(block_xdim,block_ydim,block_zdim);
 
- 	unsigned char temp;
+ 	unsigned int tempstate;
  	unsigned char	point_color[3];
 
  	bool xtest,ytest,ztest;
@@ -156,14 +156,14 @@ void Voraldo_IO::display(std::string filename, double x_rot, double y_rot, doubl
  			//The goal here is to achieve some level of speedup when compared to
  			//doing an exhaustive check through all points on all vectors from
  			//the pixels in the image.
- 			line_box_intersection = parent->intersect_bbox(block_min,block_max,vector_starting_point,vector_increment,t0,t1);
+ 			line_box_intersection = parent->intersect_ray_bbox(block_min,block_max,vector_starting_point,vector_increment,tmin,tmax);
 
  			if(line_box_intersection)
  			{//we will need to step through the box
  				for(double z = tmin; z <= tmax; z+=0.5) //go from close intersection point to far intersection point
  				{
  					vector_test_point = vector_starting_point + z*vector_increment;
- 					temp = parent->get_data_by_vector_index(vector_test_point).state;
+ 					tempstate = parent->get_data_by_vector_index(vector_test_point);
  					if(temp!=0)
  					{
  						point_color = palette[temp];
@@ -272,12 +272,12 @@ void Voraldo_Draw::mask_by_state(unsigned char s)
  }
 }
 
-void Voraldo_Draw::draw_point(vec point, unsigned char set, bool draw, bool mask)
+void Voraldo_Draw::draw_point(vec point, unsigned char set, bool draw, unsigned char alpha, bool mask)
 {
  parent->set_data_by_vector_index(point,set,draw,mask);
 }
 
-void Voraldo_Draw::draw_line_segment(vec v1, vec v2, unsigned char set, bool draw, bool mask)
+void Voraldo_Draw::draw_line_segment(vec v1, vec v2, unsigned char set, bool draw, unsigned char alpha, bool mask)
 {
  vec starting_point = v1;
 	vec current_point = starting_point;
@@ -294,7 +294,7 @@ void Voraldo_Draw::draw_line_segment(vec v1, vec v2, unsigned char set, bool dra
 	}
 }
 
-void Voraldo_Draw::draw_triangle(vec v0, vec v1, vec v2, unsigned char set, bool draw, bool mask)
+void Voraldo_Draw::draw_triangle(vec v0, vec v1, vec v2, unsigned char set, bool draw, unsigned char alpha, bool mask)
 {
  //point zero is the origin point
 
@@ -344,7 +344,7 @@ void Voraldo_Draw::draw_triangle(vec v0, vec v1, vec v2, unsigned char set, bool
  	}
 }
 
-void Voraldo_Draw::draw_sphere(vec center_point, double radius, unsigned char set, bool draw, bool mask)
+void Voraldo_Draw::draw_sphere(vec center_point, double radius, unsigned char set, bool draw, unsigned char alpha, bool mask)
 {
  vec index;
  for(int i = 0; i < parent->x_dim; i++)
@@ -503,7 +503,7 @@ void Voraldo_Draw::draw_tube(vec bvec, vec tvec, double inner_radius, double out
 
 }
 
-void Voraldo_Draw::draw_quadrilateral_hexahedron(vec a, vec b, vec c, vec d, vec e, vec f, vec g, vec h, unsigned char set, bool draw, bool mask)
+void Voraldo_Draw::draw_quadrilateral_hexahedron(vec a, vec b, vec c, vec d, vec e, vec f, vec g, vec h, unsigned char set, bool draw, unsigned char alpha, bool mask)
 {
  vec center = a + b + c + d + e + f + g + h;
  	center = vec(center[0]/8, center[1]/8, center[2]/8);
@@ -844,9 +844,11 @@ Voraldo::Voraldo()
   palette[25] = {4,126,0};      //MS Dark Green High
   palette[26] = {12,126,69};    //MS Dark Green Low
   palette[27] = {151,181,138};  //T Light Green
-  palette[28] = {101,132,92};
-  palette[29] = {};
-  palette[30] = {};
+  palette[28] = {101,132,92};   //T Med Green
+  palette[29] = {34,58,48};     //T Med-Dark Green
+  palette[30] = {32,44,17};     //T Dark Green
+
+//BLUE/INDIGO
 
   palette[31] = {};
   palette[32] = {};
