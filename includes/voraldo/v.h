@@ -38,15 +38,15 @@ using std::endl;
 //forward declaration of Voraldo, so that it can be used in the IO and Draw
 class Voraldo;
 
-struct RGBA{
+struct RGB{
 	unsigned char red;
 	unsigned char green;
 	unsigned char blue;
- double alpha; //changing this to avoid excessive quantization errors
 };	//I am still researching how the alpha channel is implemented
 
 struct Vox{
 	unsigned int state;
+	unsigned char alpha; //this is a better way to handle alpha, in this context
 	bool mask;
 
 	//unsigned char lighting_intensity;
